@@ -1,0 +1,71 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+    <script src="/placeholder.min.js"></script>
+    <style type="text/css">
+    table {
+        width: 500px;
+    }
+    td {
+        padding: 5px;
+        vertical-align: top;
+    }
+    td.label {
+        width: 200px;
+    }
+    input, textarea {
+        width: 150px;
+    }
+    .placeholder {
+        font-style: italic;
+        color: #a2a2a2;
+    }
+    </style>
+</head>
+
+<body>
+    <form id="form" method="POST">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="label"><label for="text">input type="text"</label></td>
+                    <td><input id="text" name="_text" type="text" placeholder="Nick"/></td>
+                </tr>
+                <tr>
+                    <td class="label"><label for="email">input type="email"</label></td>
+                    <td><input id="email" name="_email" type="email" placeholder="Email address"/></td>
+                </tr>
+                <tr>
+                    <td class="label"><label for="password">input type="password"</label></td>
+                    <td><input id="password" name="_password" type="password" placeholder="Password"/></td>
+                </tr>
+                <tr>
+                    <td class="label"><label for="search">input type="search"</label></td>
+                    <td><input id="search" name="_search" type="search" placeholder="Search"/></td>
+                </tr>
+                <tr>
+                    <td class="label"><label for="textarea">textarea</label></td>
+                    <td><textarea id="textarea" name="_textarea" placeholder="Textarea"></textarea></td>
+                </tr>
+            </tbody>
+        </table>
+        <input type="submit" name="_submit" value="Check!"/>
+    </form>
+    <script>
+        window.onload = function() { 
+            var form = document.getElementById('form'),
+                placeholderTestElm = document.createElement('input'),
+                isSupported = !(undefined === placeholderTestElm.placeholder);
+
+            alert(isSupported);
+            this.initPlaceholder();
+
+            form.onsubmit = function(e) {
+                alert('After this point all inputs without values and with placeholder should be clear.');
+            }
+        }
+    </script>
+</body>
+</html>
