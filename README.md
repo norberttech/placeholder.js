@@ -1,7 +1,7 @@
 # Introduction #
 
 This **is not another jQuery** plugin ;)  
-Simple library that provide [placeholder](http://www.w3schools.com/html5/att_input_placeholder.asp)
+Simple library that provides [placeholder](http://www.w3schools.com/html5/att_input_placeholder.asp)
 behavior to IE 7+.  
 It should also works fine with older FF or Opera (not tested).
 
