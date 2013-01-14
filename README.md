@@ -1,13 +1,14 @@
 # Introduction #
 
-This **is not another jQuery** plugin ;)
-Simple library that provide (placeholder)[http://www.w3schools.com/html5/att_input_placeholder.asp]
-behavior to IE 7+. It should also works fine with old FF or Opera (not tested).
+This **is not another jQuery** plugin ;)  
+Simple library that provide [placeholder](http://www.w3schools.com/html5/att_input_placeholder.asp)
+behavior to IE 7+.  
+It should also works fine with older FF or Opera (not tested).
 
 # Usage #
 
-* Read section ** When you should not use it? ** of this document.
-* Download library and put it in your code.
+* Read section [When you should not use it?](#when-you-should-not-use-it) of this document.
+* Download [library](https://raw.github.com/norzechowicz/placeholder.js/master/placeholder.min.js) and put it in your code.
 * Execute ``window.initPlaceholder()`` method after window load.
 
 **Important**
@@ -20,6 +21,17 @@ ajax container element.
     window.initPlaceholder(document.getElementById('ajax-container'));
 ``
 
+You probably also want to make elements with placeholders italic style with gray color.  
+This can be done because every single element with active placeholder gets ``.placeholder`` class.   
+Those lines in css should do the job
+
+```css
+.placeholder {
+    font-style: italic;
+    color: #a2a2a2;
+}
+```
+
 ## When you should not use it? ##
 
 1. First of all this is only a hack. Until developers will not stop using such scripts
@@ -31,7 +43,7 @@ this script because there are many placeholder simulators based on different lib
 
 ## Demo ##
 
-Check it out!
+[Check it out!](http://norzechowicz.github.com/placeholder.js)
 
 ## Contributing ##
 

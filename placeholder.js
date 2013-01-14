@@ -2,7 +2,7 @@
     "use strict";
     var doc = window.document,
         placeholderTestElm = doc.createElement('input'),
-        isSupported = !!((undefined !== placeholderTestElm.placeholder)),
+        isSupported = !(undefined === placeholderTestElm.placeholder),
         placeholderApi = {
             passwordElmNum : 0,
             hasClass : function (element, className) {
