@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-    <script src="/placeholder.min.js"></script>
+    <script src="https://raw.github.com/norzechowicz/placeholder.js/master/placeholder.min.js"></script>
     <style type="text/css">
     table {
         width: 500px;
@@ -26,6 +26,7 @@
 </head>
 
 <body>
+
     <form id="form" method="POST">
         <table>
             <tbody>
@@ -53,17 +54,22 @@
         </table>
         <input type="submit" name="_submit" value="Check!"/>
     </form>
+    <h2>Usage:</h2>
+    <script src="https://gist.github.com/4533266.js"></script>
     <script>
         window.onload = function() { 
             var form = document.getElementById('form'),
                 placeholderTestElm = document.createElement('input'),
                 isSupported = !(undefined === placeholderTestElm.placeholder);
 
-            alert(isSupported);
-            this.initPlaceholder();
+            if (!isSupported) { 
+                this.initPlaceholder();
 
-            form.onsubmit = function(e) {
-                alert('After this point all inputs without values and with placeholder should be clear.');
+                form.onsubmit = function(e) {
+                    alert('After this point all inputs without values and with placeholder should be clear.');
+                }
+            } else {
+                alert('Sorry but the browser you are currently using have native placeholder support implemented. Try with older one.')
             }
         }
     </script>
